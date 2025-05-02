@@ -1,42 +1,353 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+  --constant-black: rgb( 18,30,46 );
+
+  /* LIGHT MODE */
+
+  --dialog-color: rgba(255,255,255, 0.6);
+  --base-color: rgb(255,255,255);
+  --base-color-light: rgb(255,255,255);
+  --bar-head-color: rgb(77, 8, 107);
+  --brand-color: rgb(77, 8, 107);
+  --brand-color-light: rgba( 77, 8, 107, 0.8 );
+
+  --brand-color-dark: rgb(77, 8, 107);
+
+  --white-text: rgb( 255,255,255 );
+  --black-text: rgb( 18,30,46 );
+
+  --shadow-color: rgba( 100,100,100, 0.3 );
+  --hover-color: rgba( 123,31,162, 0.1 );
+  --hover-color-dark: rgba( 123,31,162, 0.2 );
+  --scroll-color: rgba( 110,110,110, 0.2 );
+
+  --titleBarHeight : 40px;
+  
+  --barImg: url(/images/sideBarBgLight.png);
+
+  --loginImg: url(/images/loginLight.png);
+
+  --homeBG: url(/images/homeBG.jpg);
+  
+  --scrollbarWidth: 8px;
+  --scrollbarWidth2: 4px;
+
+
+  /* RESULT PROPERTIES */
+  --resultBorderColor: rgb(200,200,200);
+  --resultHeaderHeight:44px;
+  --resultRowHeight:25px;
+
+  /* RESULT REMARK */
+  --pass-color: rgb(77, 8, 107);
+  --fail-color: rgb(227, 18, 129);
+  
+  --error-color: rgb(227, 18, 129);
+
+  --neutral-card-color: rgba(110,110,110,0.2);
+
+  --sidebarWidthB: 200px;
+  --sidebarWidthS: 55px;
+
+  --sidebarWidth: 55px;
+
+  --presentationDragMargin: 7px;
+  --presentationDragHeight: 35px;
+
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+
+body{
+  overflow: hidden;
+  color: var(--white-text);
+  scroll-behavior: smooth;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+
+.h300{
+height: 300px;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.m300{
+max-height: 300px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.h200{
+  height: 200px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.h230{
+  height: 230px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.m200{
+  max-height: 200px;
+}
+
+
+
+.h100{
+  height: 100px;
+}
+
+
+.m100{
+  max-height: 100px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+margin: 0;
+/* appearance: none; */
+display: none; /* spinning not allowed */
+}
+
+
+.input{
+border: none;
+outline: none;
+box-shadow: 0 0 8px 0px var(--shadow-color);
+padding-left: 5px;
+padding: 3px 5px;
+transition: all 0.3s;
+color: var(--black-text);
+background: var(--base-color);
+font-size: 14px;
+border: 1px solid var(--brand-color);
+border-radius: 15px;
+}
+
+
+
+.tippy-box[data-theme~='tomato'][data-placement^='top'] > .tippy-arrow::before {
+border-top-color: var(--base-color);
+}
+.tippy-box[data-theme~='tomato'][data-placement^='bottom'] > .tippy-arrow::before {
+border-bottom-color: var(--base-color);
+}
+.tippy-box[data-theme~='tomato'][data-placement^='left'] > .tippy-arrow::before {
+border-left-color: var(--base-color);
+}
+.tippy-box[data-theme~='tomato'][data-placement^='right'] > .tippy-arrow::before {
+border-right-color: var(--base-color);
+}
+
+.tippy-box[data-theme~='tomato'] > .tippy-svg-arrow {
+fill: var(--base-color);
+}
+
+
+.tippy-box[data-theme~='tomato'] {
+
+background-color: var(--base-color);
+color: var(--black-text);
+box-shadow: 0 4px 10px 2px var(--shadow-color);
+font-size: 11px;
+min-height: 20px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+padding-left: 3px;
+padding-right: 3px;
+
+border-radius: 5px;
+
+}
+
+
+
+.baseBGLight{
+background-color: var(--base-color-light);
+}
+
+.textColor{
+color: var( --black-text );
+}
+
+.brandColor{
+color: var(--brand-color);
+}
+
+.brandBG{
+background-color: var(--brand-color);
+}
+
+
+::-webkit-scrollbar{
+  width: var(--scrollbarWidth);
+  height: var(--scrollbarWidth);
+  outline: none;
+}
+
+::-webkit-scrollbar-track{
+background: transparent;
+}
+
+
+::-webkit-scrollbar-thumb{
+transition: all 0.3s;
+background: var(--scroll-color);
+border-radius: 20px;
+cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background: var(--brand-color);
+}
+
+
+
+
+
+.slimScroll::-webkit-scrollbar{
+width: var(--scrollbarWidth2);
+height: var(--scrollbarWidth2);
+outline: none;
+}
+
+.slimScroll::-webkit-scrollbar-track{
+background: transparent;
+}
+
+
+.slimScroll::-webkit-scrollbar-thumb{
+transition: all 0.3s;
+background: var(--scroll-color);
+border-radius: 20px;
+cursor: pointer;
+}
+
+.slimScroll::-webkit-scrollbar-thumb:hover{
+background: var(--brand-color);
+}
+
+
+/* APP TITLE */
+
+.hideTitle {
+margin-left: 10px;
+margin-right: 10px;
+user-select: none;
+font-weight: bold;
+
+opacity: 0;
+/* transform: translateY(-110%); */
+color: var(--brand-color);
+}
+
+.showTitle {
+
+margin-left: 10px;
+margin-right: 10px;
+user-select: none;
+font-weight: bold;
+
+opacity: 1;
+transition: opacity 1.5s;
+/* transform: translateY(0); */
+
+color: var(--brand-color);
+}
+
+
+
+.hideDialog{
+transition: all 0.4s;
+transform: scale(0,0) !important;
+border-radius: 50% !important;
+background-color: transparent !important;
+}
+
+.showDialog{
+transform: scale(1,1) !important;
+border-radius: 0px;
+}
+
+
+
+.showFromTop{
+animation: fromTop 1s forwards;
+}
+
+@keyframes fromTop {
+0%{ transform: translateY(-500px); }
+100%{ transform: translateY(0); }
+}
+
+.showSavePin{
+animation: fromRight 1s forwards;
+}
+
+@keyframes fromRight {
+0%{ transform: translateX(500px); }
+100%{ transform: translateX(0); }
+}
+
+
+.showDisablePin{
+animation: fromLeft 1s forwards;
+}
+
+@keyframes fromLeft {
+0%{ transform: translateX(-500px); }
+100%{ transform: translateX(0); }
+}
+
+
+
+
+.closeButton{
+
+width: 30px;
+height: 30px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--brand-color);
+
+padding: 7px;
+
+background-color: var(--base-color);
+cursor: pointer;
+
+border-radius: 50%;
+box-shadow: 0 0 25px 5px var(--shadow-color);
+
+transition: all 0.3s;
+opacity: 0.5;
+}
+
+.closeButton:hover{
+background-color: var(--brand-color);
+color: var(--white-text);
+opacity: 1;
+}
+
+.dialogTitle{
+color: var(--brand-color) !important;
+font-size:17px;
+}
+
+.subTitle{
+color: var(--black-text) !important;
+font-size:14px;
+transition: all 0.3s;
+}
+
+.subTitle:hover{
+  color: var(--brand-color) !important;
+}
+
+.subTitle:active{
+  transform: scale(0.98);
+}
+
+th{
+  font-size: 11px;
+  font-weight: bold;
 }

@@ -1,0 +1,106 @@
+.aboutPane{
+    /* overflow-x: auto; */
+    max-height: calc( 100vh - 50px ) !important;
+    padding: 20px;
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    color: var(--black-text);
+
+    overflow-y: auto;
+    animation: load 0.6s;
+}
+
+
+@keyframes load {
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.deap{
+    color: var(--brand-color) !important;
+    font-size: 60px;
+    font-weight: 400;
+    user-select: none;
+}
+
+.meaning, .version{
+    font-size: 16px;
+    user-select: none;
+}
+
+.email{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+
+.definition{
+    box-shadow: 0 0 24px var(--shadow-color);
+    border-radius: 30px;
+    background-image: var(--loginImg);
+    background-color: rgba(255,255,255,0.1);
+    margin-top: 35px;
+    padding: 30px 40px;
+    font-size: 16px;
+    user-select: none;
+    font-weight: 350;
+}
+
+.definition span{
+    font-weight: bold;
+}
+
+.p{
+    padding-top: 5px;
+}
+
+.pointer{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.pointer:hover{
+    color: var(--brand-color);
+}
+
+.pointer:active{
+    color: var(--black-text);
+    transform: scale(0.95);
+}
+
+.logoArea{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;    
+}
+
+.appLogo{
+    padding: 30px;
+    background-image: url('/images/deap.png');
+    background-size: cover;
+    border-radius: 20px;
+    width: 70px;
+    height: 70px;
+    margin-right: 15px;
+}
+
+.a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.a:hover{
+    color: var(--brand-color);
+}

@@ -1,0 +1,44 @@
+
+.menuItems{
+    /* min-width: 120px; */
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    padding: 5px 20px;
+}
+
+
+
+
+.scroll{
+    overflow-y: auto;
+}
+
+.space{
+    margin-right: 10px;
+}
+
+
+
+
+.italic{
+    font-style: italic;
+    font-size: 13px;
+    color: var(--black-text);
+}
+
+
+.title{
+    font-weight: bold;
+    color: var(--brand-color);
+    font-size: 16px;
+}
+
+.tabBody{
+    margin-top: 5px;
+    /* min-width: 200px; */
+    max-width: 300px;
+    font-size: 14px;
+    color: var(--black-text);
+    /* padding: 20px; */
+}

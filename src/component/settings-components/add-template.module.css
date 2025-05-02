@@ -1,0 +1,222 @@
+
+.menuItems{
+    /* min-width: 120px; */
+    display: flex;
+    flex-direction: column;
+    max-height: 74vh;
+    padding: 5px 20px;
+}
+
+.title{
+    font-weight: bold;
+    color: var(--black-text);
+}
+
+.subtitle{
+    color: var(--black-text);
+    font-size: 13px;
+}
+
+.scroll{
+    display: flex;
+    overflow: scroll;
+    padding-bottom: 5px;
+    margin-top: 15px;
+}
+
+
+
+.col{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.line2{
+    width: 1.5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: linear-gradient(to bottom, transparent,transparent, rgba(150,150,150,0.4), rgba(150,150,150,0.4), rgba(150,150,150,0.4), transparent, transparent);
+}
+
+
+.line{
+    border-left: 2px solid var(--neutral-card-color);
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.colMax{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+
+.colMax label{
+    margin: 0px 5px;
+    width: 111px;
+    color:var(--black-text);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.col input{
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 130px;
+    box-shadow: 0 0 8px 0px var(--shadow-color);
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.3s;
+    color: var(--black-text);
+
+    background: var(--base-color);
+    /* color: var(--white-text); */
+    font-size: 14px;
+    border: 1px solid var(--brand-color);
+    border-radius: 15px;
+}
+
+.col input:hover{
+    
+    border-color: var(--black-text);
+    box-shadow: 0 0 20px 0px var(--brand-color);
+}
+
+
+.icon{
+    color: var(--black-text);
+}
+
+.col .index{
+    /* width: fit-content; */
+    padding: 4px 8px;
+    margin-bottom: 5px;
+
+    background-color: var(--brand-color);
+    color: var(--white-text) !important;
+
+    
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden;
+
+    white-space: nowrap;
+    width: 130px;
+
+    border-radius: 15px;
+    min-height: 22px;
+    max-height: 22px;
+
+}
+
+.alert{
+    font-size: 12px;
+    background-color: var(--neutral-card-color);
+    padding: 5px 10px;
+    margin-top: 15px;
+    color: var(--error-color) !important;
+    font-style: italic;
+    background: linear-gradient(to right, var(--neutral-card-color), transparent);
+    border-radius: 60px;
+}
+
+.duplicate{
+    background-color: var(--error-color) !important;
+    border-color: transparent !important;
+    color: white !important;
+}
+
+
+.col .pindex{
+    width: fit-content;
+    padding: 4px 8px;
+    margin-bottom: 5px;
+
+    background-color: var(--neutral-card-color);
+    color: var(--black-text) !important;
+
+    
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    border-radius: 15px;
+    min-height: 22px;
+    max-height: 22px;
+}
+
+
+
+
+
+.nameInput{
+    border: none;
+    outline: none;
+    margin: 2px;
+    max-width: 200px;
+    height: 30px;
+    box-shadow: 0 0 8px 0px var(--shadow-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: var(--base-color);
+    color: var(--black-text);
+    transition: all 0.3s;
+    border-radius: 50px;
+    border: 1px solid var(--brand-color);
+}
+
+
+
+.predetermined{
+    color: rgba(0,0,0,0.5) !important;
+    color: var(--black-text) !important;
+    opacity: 0.5;
+}
+
+.name{
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 111px;
+    box-shadow: 0 0 8px 0px var(--shadow-color);
+
+    padding:1px 5px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent ); 
+    border-radius: 50px;
+    transition: all 0.3s;
+    color: var(--black-text);
+    opacity: 0.5;
+    font-size: 14px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.cnt{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.alert{
+    font-size: 12px;
+    background: linear-gradient(to right, var(--neutral-card-color), transparent);
+    padding: 5px 10px;
+    margin-top: 15px;
+    color: var(--error-color) !important;
+    font-style: italic;
+    border-radius: 60px;
+}
+
+.disabled{
+    opacity: 0.8;
+    pointer-events: none;
+}

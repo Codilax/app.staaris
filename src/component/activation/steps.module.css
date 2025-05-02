@@ -1,0 +1,84 @@
+.styles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    
+}
+
+.selectedStep{
+    width: 80px;
+    height: 8px;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: var(--brand-color);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.step{
+    width: 80px;
+    height: 8px;
+    border-radius: 50px;
+    background-color: var(--shadow-color);
+    margin: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+
+
+
+.selectedStep:hover{
+    
+    box-shadow: 0 0 30px 1px var(--brand-color);
+}
+.step:hover{
+    background-color: var(--white-text);
+    box-shadow: 0 0 30px 1px var(--brand-color);
+}
+
+.stepPane{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 10px;
+    min-width: 400px;
+    max-width: 500px;
+    animation: moveIn 0.5s linear forwards;
+}
+
+@keyframes moveIn {
+
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+.stepPane p{
+    font-size: 14px;
+}
+
+.stepPane .stepLabel{
+    font-weight: bold;
+    border-left: 4px solid var(--brand-color);
+    padding-left: 5px;
+    margin-bottom: 5px;
+}

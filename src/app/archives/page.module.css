@@ -1,0 +1,27 @@
+.pane{
+    overflow-y: auto;
+    max-height: calc( 100vh - 50px );
+    animation: load 0.6s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+.heading{
+    color: var(--black-text);
+}
+
+

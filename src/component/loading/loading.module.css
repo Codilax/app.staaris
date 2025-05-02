@@ -1,0 +1,38 @@
+
+
+.cover{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding-left: var(--sidebarWidth);
+    transition: all 0.9s;
+}
+
+.loading{
+    color: var(--brand-color);
+    width: 50px !important;
+    height: 50px !important;
+    z-index: 10;
+    border-width: 2px !important;
+}
+
+.central{
+    padding-left: 0 !important;
+}
+
+.inProgress{
+    display: flex;
+}
+
+.none{
+    display: none;
+}
+

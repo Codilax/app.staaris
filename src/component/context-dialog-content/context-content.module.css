@@ -1,0 +1,44 @@
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 13px;
+
+    background-color: var(--base-color);
+    color: var(--brand-color);
+
+    border-radius: 20px;
+    box-shadow: 0 0 23px 10px rgba(100,100,100,0.1);
+    padding: 1px 4px;
+}
+
+.items::after{
+    content: "";
+    position: absolute;
+    left: -8px;
+    margin-left: -1px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent var(--base-color) transparent transparent;
+}
+
+.items div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px 5px;
+}
+
+.control{ transition:all 0.3s; cursor: pointer;}
+.control:hover{
+    transform: scale(1.1);
+}
+.control:active{
+    transform: scale(0.9);
+}
+
+.title{
+    padding: 3px 5px;
+    
+}

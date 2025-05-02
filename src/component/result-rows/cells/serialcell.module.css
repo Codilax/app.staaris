@@ -1,0 +1,61 @@
+.cell{
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(210,210,210,0.2);
+    user-select: none;
+    cursor: pointer;
+}
+
+
+.cell div{
+    display: none;
+}
+
+.cell:hover label{
+    display: none;
+}
+
+.cell:hover div{
+    display: block;
+}
+
+.checked label{
+    display: none;
+}
+
+.checked div{
+    display: block;
+}
+
+
+
+.colBorder0{
+    border: none;    
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.colBorderx{
+    border: none;    
+    border-left: 1px solid var(--resultBorderColor);
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.duplicate{
+    transition: all 0.5s;
+    background-color: var( --fail-color ) !important;
+    color: var(--white-text) !important;
+}

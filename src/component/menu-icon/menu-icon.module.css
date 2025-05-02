@@ -1,0 +1,22 @@
+.menuicons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-right: 8px;
+    padding-left: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s;
+
+    color: var(--black-text);
+}
+
+
+.menuicons:hover{
+    opacity: 1;
+}
+
+.menuicons:active{
+    transform: scale(0.9);
+}

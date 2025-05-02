@@ -1,0 +1,119 @@
+
+.sideBarItem{
+    position: relative;
+    width: var(--sidebarWidth);
+    display: flex;
+    align-items: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+
+    overflow: hidden;
+    transition: all 0.3s;
+
+    color: var(--brand-color);
+    cursor: pointer;
+    user-select: none;
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.sideBarItem:hover{
+    background-color: var(--hover-color);
+}
+
+.sideBarItem:active{
+    background-color: var(--hover-color-dark);
+}
+
+.icon{
+    margin-right: 20px;
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.title{
+    transition: all 0.6s;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.titleHide{
+    transition: all 0.3s;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    transform: translateX(-15px);
+}
+
+.selected{
+    background-color: var(--hover-color) !important;
+}
+
+.select{
+    transition: all 0.4s;
+    min-width: 4px;
+    min-height: 30px;
+    margin-right: 9px;
+    background-color: var(--brand-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.deselect{
+    transition: all 0.4s;
+    min-width: 4px;
+    min-height: 30px;
+    margin-right: 9px;
+    background-color: transparent;
+}
+
+.float{
+    position:fixed;
+    left: var(--sidebarWidth);
+    width: 100px;
+}
+
+.sideBarItem:hover .contextMenu{
+    display: flex;
+    z-index: 5;
+}
+
+.contextMenu{
+    transition: all 0.3s;
+    position: fixed;
+    display:flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    /* left: calc(4% + 5px); */
+    left: calc( var(--sidebarWidth) - 5px );
+
+    z-index: 1;
+    height: var(--resultRowHeight);
+    animation: show 0.3s forwards;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.noMenu{
+    display: none;
+}

@@ -1,0 +1,22 @@
+.resultPane{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    position: relative;
+    padding-right: 1px;
+    height: calc( 100vh - 160px );
+}
+
+.resultRowSection{
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    height: 100vh;
+}
+
+
+.pMode{
+    height: calc( 100vh - 45px ) !important;
+}
+
+.offPMode{
+    height: calc( 100vh - 160px ) !important;
+}

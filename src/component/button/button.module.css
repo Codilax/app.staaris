@@ -1,0 +1,93 @@
+.button{
+    background-color: var(--brand-color-dark);
+    color: var(--white-text);
+    padding: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+}
+
+.button:hover{
+    transform: scale(0.95);
+}
+.button:active{
+    transform: scale(0.9);
+}
+
+.backButton{
+    color: var(--black-text);
+    padding: 3px 5px;
+
+    margin: 0 5px;
+
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    font-size: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    border-radius: 30px;
+
+    white-space: nowrap;
+}
+
+.backButton:hover{
+    background-color: var(--brand-color);
+    color: var(--white-text) !important;
+}
+
+.anim{
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%{
+        background-color: var(--brand-color);
+    }
+
+    50%{
+        background-color: var(--error-color);
+    }
+
+    100%{
+        background-color: var(--brand-color);
+    }
+}
+
+.activateButton{
+    background-color: var(--brand-color) !important;
+    color: var(--white-text);
+    padding: 3px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    white-space: nowrap;
+}
+
+.activateButton:active{
+    transform: scale(0.9);
+}
+
+.activateButton:hover{
+    background-color: var(--brand-color);
+    color: var(--white-text) !important;
+}

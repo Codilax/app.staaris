@@ -1,0 +1,113 @@
+
+.template{
+    background-color: var(--neutral-card-color);
+    padding: 5px 15px;
+    margin: 10px;
+    color: var(--black-text);
+    border-radius: 20px;
+    user-select: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    
+}
+
+.template:hover{
+    transform: scale(1.03,1.03);
+}
+
+.template:active{
+    transform: scale(1,1);
+}
+
+.templatesPane{
+    /* overflow-x: auto; */
+    padding: 5px;
+    /* max-width: calc( 100vw - var(--sidebarWidth) - 55px ) !important; */
+}
+
+.selected{
+    background-color: var(--brand-color-dark);
+    color: var(--white-text);
+}
+
+.del{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+    color: var(--black-text);
+    /* box-shadow: 0 0 40px 5px var(--shadow-color); */
+    border: 2px solid transparent;
+    transition: all 0.3s;
+
+    font-size: 0px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.del:hover{
+    background-color: var(--brand-color);
+    border: 2px solid rgba(255,255,255,0.1);
+    color: white;
+}
+
+
+
+.rename{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    
+    color: var(--black-text);
+    border: 2px solid transparent;
+    transition: all 0.3s;
+
+    font-size: 0px;
+    margin-left: 0px;
+    padding: 0px;
+}
+
+.rename:hover{
+    background-color: var(--brand-color);
+    border: 2px solid rgba(255,255,255,0.1);
+    color: white;
+}
+
+.noData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--black-text);
+}
+
+
+.template:hover .del{
+    font-size: 13px;
+    margin-left: 5px;
+    padding: 8px;
+
+}
+
+.selected .del{
+    color: var(--white-text);
+}
+
+.template:hover .rename{
+    font-size: 17px;
+    margin-left: 5px;
+    padding: 6px;
+}
+
+.selected .rename{
+    color: var(--white-text);
+}

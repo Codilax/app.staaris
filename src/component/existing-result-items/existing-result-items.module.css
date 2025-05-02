@@ -1,0 +1,80 @@
+.archive{
+    background-color: var(--neutral-card-color);
+
+    padding: 6px 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+    color: var(--black-text);
+    user-select: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.archive:first-child{ margin-top: 0px !important; }
+.archive:last-child{ margin-bottom: 0px !important; }
+
+.archive label{
+    cursor: pointer;
+}
+
+.archive:hover{
+    background-color: var(--hover-color) !important;
+}
+
+.serial{
+    background-color: var(--brand-color-dark);
+    padding: 2px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--white-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-wrap: nowrap;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.serial:active{
+    transform: scale(0.95) !important;
+}
+
+.archiveName{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s;
+    padding-left: 15px;
+}
+
+.archiveName:hover{
+    color:var(--brand-color);
+}
+
+.archiveName:active{
+    transform: scale(0.95) !important;
+}
+
+
+.friendlyName{
+    font-size: 14px;
+}
+
+.date{
+font-style: italic;
+font-size: 12px;
+margin-top: 5px;
+}
+
+.pane{
+    margin-top: 10px;
+    overflow-y: auto;
+    padding: 2px;
+}

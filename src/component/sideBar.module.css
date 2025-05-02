@@ -1,0 +1,61 @@
+.header{
+
+    background-color: var(--bar-head-color);
+    min-width: 100%;
+    min-height: 40px;
+    background-image: var(--barImg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    margin-bottom: 10px;
+    padding-top: 15px;
+
+    transition: all 0.3s;
+}
+
+.menuToggle{
+
+    width: var(--sidebarWidth);
+    background-color: var(--base-color);
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    
+}
+
+
+
+.sideBar{
+
+    width: var(--sidebarWidth) !important;
+    min-width: var(--sidebarWidth) !important;
+    
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: all 0.3s;
+
+    /* overflow: hidden; */
+    background-color: var(--base-color);
+
+    box-shadow: 1px 0px 25px var(--shadow-color);
+    opacity: 1;
+
+    z-index: 100;
+
+    position: absolute;
+    /* background: linear-gradient(to bottom, var(--base-color) 40%, var(--dialog-color) ); */
+    /* backdrop-filter: blur(15px); */
+}
+
+
+.sideItemsPane{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc( 100vh - 95px );
+    margin-bottom: 10px;
+}

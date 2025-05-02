@@ -1,0 +1,55 @@
+.homeiCard{
+    background-color: rgba(255,255,255,0.3);
+
+    padding: 10px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transition: all 0.3s;
+
+    border: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.homeiCard:hover{
+    border: 1px solid rgba(255,255,255,0.6);
+    transform: scale(1.05);
+}
+
+.homeiCard:active{
+    transform: scale(1);
+}
+
+.title{
+    font-style: italic;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.icon{
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.shadow{
+    box-shadow: 5px 5px 10px 0px rgba(100,100,100,0.1);
+    background-color: var(--base-color);
+    color: var(--black-text);
+}
+
+
+
+
+

@@ -1,0 +1,32 @@
+.chip{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    background-color: rgba(200,200,200, 0.4);
+    border-radius: 30px;
+    padding: 2px 8px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 12px;
+    margin: 5px;
+    margin-left: 0;
+    margin-right: 10px;
+    color: var(--black-text);
+
+    white-space: nowrap;
+    user-select: none;
+    
+}
+
+
+.active{
+    color: var(--brand-color);
+    margin-left: 5px;
+}
+
+.inactive{
+    display: none;
+}

@@ -1,0 +1,39 @@
+
+.menuItems{
+    /* min-width: 350px; */
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    padding: 5px 20px;
+}
+
+
+.title{
+    font-weight: bold;
+    color: var(--brand-color);
+}
+
+.scroll{
+    overflow-y: auto;
+}
+
+.space{
+    margin-right: 10px;
+}
+
+.label{
+    font-size: 16px;
+    color: var(--black-text);
+}
+
+.italic{
+    font-style: italic;
+    font-size: 13px;
+    color: var(--black-text);
+}
+
+
+.tabBody{
+    margin-top: 10px;
+    min-width: 250px;
+}

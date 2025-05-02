@@ -1,0 +1,54 @@
+.contentArea{
+    padding: 6px;
+    overflow: hidden;
+    outline: none;
+}
+
+
+.rightPane{
+
+    /* flex: 1; */
+    width: 100vw  !important;
+    height: 100vh;
+
+    padding-left: var(--sidebarWidth);
+    transition: padding-left 0.3s;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+    align-items: stretch; */
+
+    /* background-color: green; */
+}
+
+
+.closeDialog{
+    max-width: 300px;
+    padding: 5px 20px;
+    padding-top: 0;
+    color: var(--black-text);
+}
+
+.noLock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--black-text);
+    font-size: 14px;
+    padding: 5px 20px;
+    padding-top: 0;
+}
+
+.goto{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.goto:hover{
+    color: var(--brand-color);
+}
+
+.goto:active{
+    transform: scale(0.95);
+}

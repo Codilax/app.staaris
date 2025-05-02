@@ -1,0 +1,57 @@
+
+.rowItem{
+    display: flex;
+    background-color: var(--base-color);
+    z-index: 1;
+    color: var(--brand-color);
+
+    margin-right: calc( var(--scrollbarWidth) + 1px );
+    
+    margin-top: 10px;
+
+    box-shadow: 0 -10px 25px 0px var(--shadow-color);
+    user-select: none;
+
+    position: relative;
+}
+
+
+.closeResult{
+    position: absolute;
+
+    right: -5px;
+    top: -5px;
+
+    width: 22px;
+    height: 22px;
+
+    background-color: var(--base-color-light);
+    border-radius: 50px;
+    /* opacity: 0.5; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--brand-color);
+    font-size: 13px;
+    transition: all 0.3s;
+    box-shadow: -10px -15px 35px 0px var(--brand-color);
+    /* border: 1px solid var(--brand-color);; */
+    z-index: 100;
+    /* border-top: 0.4px solid var(--neutral-card-color); */
+}
+
+
+.closeResult:hover{
+    transform: scale(1.1);
+    box-shadow: -10px -15px 30px 5px var(--brand-color);
+}
+
+.closeResult:active{
+    transform: scale(0.9);
+}
+
+.pMode{
+    box-shadow: none !important;
+}
+

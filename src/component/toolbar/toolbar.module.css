@@ -1,0 +1,179 @@
+
+.toolbar{
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+
+.scrollX{
+    display: flex;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    flex: auto;
+    margin-right: 10px;
+}
+
+
+.menuItems{
+    min-width: 150px;
+    max-height: 75vh;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.menuItems li{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    border-radius: 40px;
+    margin: 0 7px;
+}
+
+
+
+.menuItems .micon{
+    color: var(--brand-color);
+    margin-right: 15px;
+}
+
+.menuItems li:hover{
+    background-color: var(--neutral-card-color);
+}
+
+.menuItems li:active{
+    transform: scale(0.9);
+}
+
+.menuItems li label{
+    font-size: 15px;
+    color: var(--black-text);
+    cursor: pointer;
+}
+
+.menuItems li span{
+    color: var(--black-text);
+    cursor: pointer;
+}
+
+.selected{
+    background-color: var(--neutral-card-color);
+    /* border-left: 2px solid var(--brand-color); */
+}
+
+.rName{
+
+    display: flex;
+    align-items: center;
+    
+    /* font-style: italic; */
+    font-size: 12px;
+    max-width: 12vw;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 8px;
+    color: var(--black-text);
+    user-select: none;
+}
+
+.rPane{
+    display: flex;
+    align-items: center;
+}
+
+.saved{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    user-select: none;
+
+    color: var(--black-text);
+}
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+
+.opItems{
+    margin-top: 10px;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opItems li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+   
+    transition: all 0.3s;
+    border-radius: 50px;
+
+    margin: 1px 15px;
+
+    padding: 5px 10px;
+    
+}
+
+.opItems li:hover{
+    background-color: var(--neutral-card-color);
+}
+
+.opItems li:active{
+    transform: scale(1.05);
+}
+
+.opItems li label{
+    font-style: italic;
+    color: var(--black-text);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.opItems li span{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: var(--black-text);
+    cursor: pointer;
+
+}
+
+
+.grow{
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.star{
+    font-size: 10px;
+    margin-left: 4px;
+    opacity: 0.3;
+}
+
+.fade{
+    opacity: 0.7;
+    font-size: 13px !important;
+}

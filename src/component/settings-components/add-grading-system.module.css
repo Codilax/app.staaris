@@ -1,0 +1,117 @@
+
+.menuItems{
+    /* min-width: 120px; */
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    padding: 5px 20px;
+}
+
+.title{
+    font-weight: bold;
+    color: var(--black-text);
+}
+
+.subtitle{
+    color: var(--black-text);
+    font-size: 13px;
+}
+
+.scroll{
+    overflow-y: scroll;
+}
+
+.gradeRow{
+    display: flex;
+    align-items: center;
+}
+
+.gradeHead{
+    display: flex;
+    align-items: center;
+}
+
+.gradeHead .index{
+   
+    width: 35px;
+    overflow: hidden;
+
+}
+
+.gradeHead div{
+    margin: 5px;
+    width: 111px;
+    color:var(--black-text);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.gradeRow input{
+    border: none;
+    outline: none;
+    margin: 5px;
+    width: 111px;
+    box-shadow: 0 0 8px 0px var(--shadow-color);
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+    color:var(--black-text);
+    border: 1px solid transparent;
+}
+
+.gradeRow input:hover{
+    background-color: rgba(255,255,255,0.3);
+}
+
+.gradeRow input:focus{
+    background: var(--base-color);
+    border: 1px solid var(--brand-color);
+    /* color: var(--white-text); */
+}
+
+.icon{
+    color: var(--black-text);
+}
+
+.gradeRow .index{
+    width: 30px;
+    padding: 2px 10px;
+    margin-right: 5px;
+    background-color: var(--brand-color);
+    color: var(--white-text);
+    border-radius: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.alert{
+    font-size: 12px;
+    background-color: var(--neutral-card-color);
+    padding: 5px 10px;
+    margin-top: 15px;
+    color: var(--error-color);
+    font-style: italic;
+    background: linear-gradient(to right, var(--neutral-card-color), transparent);
+    border-radius: 60px;
+}
+
+.nameInput{
+    border: none;
+    outline: none;
+    margin: 2px;
+    max-width: 200px;
+    height: 30px;
+    box-shadow: 0 0 8px 0px var(--shadow-color);
+    padding-left: 10px;
+    padding-right: 10px;
+    /* background-color: rgba(0,0,0,0.5); */
+    background-color: var(--base-color);
+    color: var(--black-text);
+    transition: all 0.3s;
+    border-radius: 50px;
+    border: 1px solid var(--brand-color);
+}

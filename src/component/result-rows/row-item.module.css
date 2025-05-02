@@ -1,0 +1,74 @@
+
+.rowItem{
+    position: relative;
+    display: flex;
+    color: var(--black-text);
+
+    animation: showItem 0.3s;
+    
+    /* Just added */
+    width: 100% !important; 
+}
+
+.rowItem:hover{
+    background-color: rgba(100,100,100,0.2) !important;
+}
+
+
+
+@keyframes showItem {
+    0%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.selected{
+    background-color: rgba(100,100,100,0.2) !important;
+}
+
+.searched{
+    background-color: var(--hover-color) !important;
+}
+
+.hovered{
+    background-color: rgba(100,100,100,0.2) !important;
+}
+
+
+.pane{
+    margin-top: 10px;
+    overflow-y: auto;
+    padding: 5px;
+    height: calc( 100vh - 140px );
+}
+
+
+.contextMenu{
+    transition: all 0.3s;
+
+    position: absolute;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    left: calc(4% + 5px);
+    z-index: 1;
+    height: var(--resultRowHeight);
+    animation: show 0.4s forwards;
+}
+
+@keyframes show {
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+    
+}
+

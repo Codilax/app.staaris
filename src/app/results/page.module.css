@@ -1,0 +1,383 @@
+.pane{
+    padding: 0px 6px 5px calc( var(--scrollbarWidth) + 6px );
+    overflow-y: hidden;
+    max-height: calc( 100vh - 45px );
+
+    animation: load 0.6s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+.bold{
+    font-weight: bold;
+}
+
+
+.heading{
+    color: var(--black-text);
+}
+
+.num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: var(--brand-color-dark);
+    color:var(--white-text);
+    padding: 5px;
+    overflow: hidden;
+}
+
+
+
+.selectionBox{
+
+    bottom: 15px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s;
+    position: absolute;
+  
+    color:var(--black-text);
+    border-radius: 100px;
+    padding: 6px 5px;
+
+    background-color: var(--base-color) !important;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 20px 2px rgba(100,100,100,0.2);
+
+    z-index: 1;
+
+}
+
+.control{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 8px 13px;
+    font-size: 16px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: var(--brand-color);
+}
+
+.controlX{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 10px;
+    border-radius: 50%;
+}
+
+.control:hover{
+    transform: scale(1.1);
+}
+
+.control:active{
+    transform: scale(0.9);
+}
+
+.conceal{
+    transform: scale(0);
+}
+
+.reveal{
+    transform: scale(1);
+}
+
+
+.close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: var(--brand-color);
+    margin-left: 5px;
+}
+
+
+.close:hover{
+    transform: scale(1.1);
+}
+
+.close:active{
+    transform: scale(0.9);
+}
+.closeR{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+    font-size: 23px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: var(--brand-color);
+    margin-left: 5px;
+}
+
+.closeR:hover{
+    transform: scale(1.1);
+}
+
+.closeR:active{
+    transform: scale(0.9);
+}
+
+.boxCover{
+
+    margin: 0 120px;
+    position: absolute;
+    bottom: 15px;
+
+    z-index: 1;
+    transition: all 0.3s;
+    width: calc(100% - var(--sidebarWidth) - 240px );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.boxContent{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-color: var(--base-color) !important;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    color:var(--brand-color);
+    border-radius: 100px;
+    font-size: 14px;
+
+    padding: 4px 5px;
+    padding-left: 10px;
+
+    box-shadow: 0 0 20px 2px rgba(100,100,100,0.2);
+    z-index: 10;
+
+}
+
+
+.contextCover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+
+.showPMenu{
+    display: block;
+}
+
+.hidePMenu{
+    display: none;
+}
+
+
+.contextMenu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--base-color) !important; */
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 10px;
+    min-width: 100px;
+    box-shadow: 0 0 20px 2px rgba(100,100,100,0.2);
+    z-index: 10;
+    user-select: none;
+
+    background-color: var(--dialog-color);
+    backdrop-filter: blur(15px);
+}
+
+.contextItem{
+    margin: 2px 0px;
+    color: var(--black-text);
+    border-radius: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.contextItem:hover
+{
+    /* color: var(--brand-color); */
+    background-color: var(--neutral-card-color);
+    transition: all 0.3s;
+}
+
+.contextItem:active{
+    transform: scale(0.95);
+}
+
+
+
+
+.pModeCover{
+
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    right: 0px;
+    left: 0px;
+    top: 10px;
+
+    min-height: 12px;
+    margin: 0;
+    z-index: 3;
+    transition: all 0.3s;
+
+    
+}
+
+.pModeCover:hover{
+    margin: 0;
+    min-height: 80px;
+    background:linear-gradient(to bottom, rgba(227, 18, 129, 0.2), transparent, transparent, transparent, transparent );
+
+}
+
+.pModeCover:hover .pModeControl{
+    opacity: 1 !important;
+    top: 50px !important;
+    color: var(--brand-color) !important;
+}
+
+.offPMode{
+    position: relative;
+    transition: all 0.3s;
+    animation: offShow 0.8s ease-in-out;
+    background-color: var(--base-color-light);
+}
+
+.pMode{
+
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: -10px;
+    bottom: 0px;
+    
+    transition: all 0.3s;
+    animation: pShow 0.8s ease-in-out;
+    z-index: 100;
+
+    background-color: var(--base-color-light);
+}
+
+
+@keyframes pShow {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes offShow {
+    0%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.pModeCover .pModeControl{
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px 2px rgba(100,100,100,0.2);
+    color: var(--brand-color);
+
+    background-color: var(--base-color) !important;
+    border: 1px solid rgba(255,255,255,0.1);
+    
+    z-index: 10;
+
+    width: 42px;
+    height: 42px;
+    top:-50px;
+    
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.pModeCover .pModeControl:hover{
+    transform: scale(1.08);
+    opacity: 1;
+}
+
+.pModeCover .pModeControl:active{
+    transform: scale(0.9);
+}
+
+.empty{
+    animation: reveal 0.3s;
+    background-color: var(--base-color-light);
+}
+
+@keyframes reveal {
+    0%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+

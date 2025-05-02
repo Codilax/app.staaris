@@ -1,0 +1,46 @@
+.cover{
+    position: absolute;
+    background-color: transparent;
+    left: 0;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    
+    z-index: 1;
+    transition: all 0.3s;
+    overflow-y: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    margin-left: var(--sidebarWidthS);
+}
+
+.transparent{
+    background: transparent !important;
+}
+
+.opaque{
+    background-color: var(--base-color);
+}
+
+.open{
+   transform: translateY(0);
+}
+
+.close {
+    transform: translateY(-100%);
+}
+
+.pane{
+    box-shadow: 0 0 25px 5px var(--shadow-color);
+    padding: 15px 0px;
+    background-color: var(--dialog-color);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    max-width: calc( 100vw - 100px );
+    overflow: hidden;
+}

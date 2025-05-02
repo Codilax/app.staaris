@@ -1,0 +1,185 @@
+.statPanel{
+    display: flex;
+    color: red;
+    justify-content: center;
+}
+
+.grade{
+    background-color: var(--neutral-card-color);
+    border-radius: 40px;
+
+    display: flex;
+    align-items: center;   
+    margin-right: 5px;
+}
+
+.grade div{
+    outline: none;
+    border: none;
+    background-color: var(--brand-color);
+    padding: 1px 10px;
+    font-size: 14px;
+    color: var(--white-text);
+    border-radius: 40px;
+}
+
+.grade label{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding-right: 7px;
+    padding-left: 3px;
+    font-size: 14px;
+    color: var(--black-text);
+    
+}
+
+
+
+.label{
+    margin-right: 8px;
+    color: var(--black-text);
+}
+
+.regNumber{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 2px 12px;
+    font-size: 16px;
+    color: var(--black-text);
+    border-radius: 40px;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
+
+.score{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 2px 12px;
+    font-size: 16px;
+    width: 152px;
+    color: var(--black-text);
+    border-radius: 40px;
+    transition: all 0.3s;
+    letter-spacing: 2px;
+}
+
+.regNumber:focus, .score:focus{
+    background-color: var(--brand-color);
+    color:white;
+    transform: scale(1.1);
+}
+
+.regNumber::placeholder, .score::placeholder{
+    color: var(--black-text);
+    opacity: 0.9;
+    font-size: 15px;
+}
+
+
+.regNumber:focus::placeholder, .score:focus::placeholder{
+    
+    opacity: 0.9;
+    font-size: 15px;
+    color: var(--white-text);
+}
+
+.rawScorePane{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: all 0.9s;
+    transform: scale(1);
+}
+
+.rawScoreNone{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: all 0.9s;
+    transform: scale(0);
+}
+
+.rawScore{
+    letter-spacing: 2px;
+    font-size: 12px;
+    color: var(--black-text);
+}
+
+.cleanRawScore{
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: var(--brand-color);
+}
+
+.dot{
+    background-color: var(--neutral-card-color);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 5px;
+}
+
+.operatorLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--neutral-card-color);
+    padding: 5px 7px;
+
+    color: var(--brand-color);
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 11px;
+    transition: all 0.3s;
+}
+
+.operatorLogo:hover{
+    transform: scale(1.1);
+}
+
+.operatorLogo:active{
+    transform: scale(1);
+}
+
+.menuItems{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItems li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 15px;
+    transition: all 0.3s;
+    border-radius: 40px;
+}
+
+.menuItems li:hover{
+    background-color: var(--neutral-card-color);
+}
+
+.menuItems li:active{
+    transform: scale(1.1);
+}
+
+.menuItems li label{
+    color: var(--black-text);
+    cursor: pointer;
+}
+
+.menuItems li span{
+    color: var(--black-text);
+    cursor: pointer;
+}
+
+.selected{
+    background-color: var(--neutral-card-color);
+}

@@ -1,0 +1,55 @@
+
+.toggleItem{
+    width: var(--sidebarWidth);
+    display: flex;
+    align-items: center;    
+    /* overflow: hidden; */
+    transition: all 0.3s;
+
+    color: var(--base-color);
+    user-select: none;
+    background-color: var(--bar-head-color);
+
+    padding-top: 10px;
+    /* padding-left: 18px; */
+    padding-bottom: 10px;
+
+}
+
+
+.icon{
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--base-color);
+    min-width: var(--sidebarWidthS) !important;
+}
+
+.icon:hover{
+    /* transform: rotate(40deg); */
+    transform: scale(1.1,1.1);
+}
+
+.icon:active{
+    /* transform: rotate(0deg); */
+    transform: scale(1,1);
+}
+
+
+.title{
+    transition: all 0.6s;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.titleHide{
+    transition: all 0.3s;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    transform: translateX(-15px);
+}

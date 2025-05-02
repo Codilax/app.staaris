@@ -1,0 +1,56 @@
+
+.appBar{
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.wcontrols{
+    z-index: 100;
+}
+
+.dragRegion{
+    -webkit-app-region:drag;
+    flex-grow: 1;
+    border-radius: 0 0 10px 10px;
+    height: 40px;
+    cursor: pointer;
+    background-color: green;
+}
+
+
+.controlIcons{
+    color: var(--brand-color);
+    transition: all 0.3s;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.controlIcons:hover{
+    color:  var(--brand-color);
+    transform: scale(1.1);
+}
+
+.controlIcons:active{
+    transform: scale(1);
+}
+
+
+.title{
+    margin-left: 10px;
+    margin-right: 10px;
+    user-select: none;
+    color: var(--brand-color );
+    font-weight: bold;
+}
+
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}

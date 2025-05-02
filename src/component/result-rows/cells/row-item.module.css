@@ -1,0 +1,19 @@
+
+.rowItem{
+    position: relative;
+    display: flex;
+    color: var(--black-text);
+}
+
+.rowItem:active{
+    color: var(--white-text);
+    background-color: var(--brand-color-dark);
+}
+
+
+.pane{
+    margin-top: 10px;
+    overflow-y: auto;
+    padding: 5px;
+    height: calc( 100vh - 140px );
+}

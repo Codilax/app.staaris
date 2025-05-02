@@ -1,0 +1,159 @@
+
+
+.cell{
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3S;
+}
+
+.colBorder0{
+    border: none;    
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    background-color: transparent;
+    /* color: var(--black-text); */
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.colBorderx{
+    background-color: transparent;
+    border: none;    
+    border-left: 1px solid var(--resultBorderColor);
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.colBorder0:hover{
+    background-color: var(--neutral-card-color);
+    /* color: var(--white-text); */
+}
+
+.colBorderx:hover{
+    /* box-shadow: 0px 0px 60px 20px var(--brand-color-dark); */
+    background-color: var(--neutral-card-color);
+    /* color: var(--white-text); */
+}
+
+
+
+.colBorder0z{
+    border: none;    
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    background-color: transparent;
+    /* color: var(--black-text); */
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.colBorderxz{
+    background-color: transparent;
+    border: none;    
+    border-left: 1px solid var(--resultBorderColor);
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+
+
+.cellz{
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+
+    background: linear-gradient(to right, var(--brand-color), transparent 70%);
+}
+
+
+
+.cell:focus{
+    background: var(--brand-color);
+    color: var(--white-text);
+}
+
+
+.hoverButton{
+    background: var(--base-color);
+    border-radius: 20px;
+    /* padding: 10px; */
+    box-shadow: 0 0 20px 5px var(--shadow-color);
+    color: var(--black-text) !important;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+    margin-left: 0px;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.hoverButton label{
+    margin-left: 3px;
+}
+
+.hoverButton *{
+    cursor: pointer;
+}
+.hoverButton:hover{
+    background-color: var(--base-color);
+    /* color: var(--white-text) !important; */
+    color: var(--brand-color) !important;
+}
+.hoverButton:active{
+    transform: scale(0.9);
+}
+
+.hoverMenuContainer{
+    justify-content: flex-start !important;
+}
+
+
+.regContainer{
+    position: relative;
+}
+
+.regLength{
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    opacity: 0.2;
+    color: var(--black-text);
+    transition: all 0.3s;
+}
+
+.regLength div{
+    background-color: var(--base-color);
+    border-radius: 20px;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.regContainer:hover .regLength{
+    opacity: 1;
+}
+

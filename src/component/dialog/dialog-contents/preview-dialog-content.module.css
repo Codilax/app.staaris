@@ -1,0 +1,59 @@
+.menuItems{
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    max-width: 70vw;
+    padding: 5px 10px;
+}
+
+.previewPane{
+    overflow: auto;
+    min-width: 400px;
+    max-height: 70vh;
+    max-width: 80vw;
+    margin: 0 10px;
+    margin-top: 10px;
+}
+
+
+.scroll{
+    overflow-y: auto;
+}
+
+.space{
+    margin-right: 10px;
+}
+
+
+.italic{
+    font-style: italic;
+    font-size: 13px;
+    color: var(--black-text);
+}
+
+
+
+
+
+
+
+.previewPane thead{
+    font-weight: bold;
+    color:var(--black-text);
+    /* border-top: 1px solid var(--neutral-card-color); */
+    border-bottom: 2px solid var(--brand-color);
+    
+}
+
+.previewPane td{
+    font-size: 12px;
+    border-bottom: 1px solid var(--neutral-card-color);
+    border-left:  1px solid var(--neutral-card-color);
+    padding: 4px;
+    color: var(--black-text);
+}
+
+.previewPane td:first-child{
+    border-left: none !important;
+}
+

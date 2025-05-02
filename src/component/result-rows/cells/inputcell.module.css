@@ -1,0 +1,83 @@
+.cell{
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s;
+}
+
+
+.colBorder0{
+    border: none;    
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    background-color: transparent;
+    /* color: var(--black-text); */
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.colBorderx{
+    background-color: transparent;
+    border: none;    
+    border-left: 1px solid var(--resultBorderColor);
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.colBorder0:hover{
+    background: var(--neutral-card-color);
+}
+
+.colBorderx:hover{
+    background: var(--neutral-card-color);
+}
+
+
+.cell:focus{
+    background: var(--brand-color);
+    color: var(--white-text);
+}
+
+.invalid{
+    background: var(--error-color) !important;
+    color: white !important;
+}
+
+.empty{
+    background: var(--fail-color) !important;
+    color: white !important;
+}
+
+
+.colSelect{
+    /* background-color: rgba(210,210,210,0.2); */
+    border-left-color: var(--brand-color) !important; 
+}
+
+.colSelectn1{
+    border-left-color: var(--brand-color) !important; 
+}
+
+.searched{
+    transition: all 0.3s;
+    background-color: var(--brand-color-dark);
+    color: var(--white-text);
+    font-weight: bold;
+}
+
+
+.colBorderx:hover.searched{
+    background: var(--brand-color-dark) !important;
+}
+
+
+.colBorderx:hover.searched.invalid{
+    background: var(--error-color) !important;
+}

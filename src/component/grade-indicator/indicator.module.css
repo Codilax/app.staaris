@@ -1,0 +1,19 @@
+.indicator{
+
+    min-width: 8px;
+    min-height: 8px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 20px;
+    box-shadow: 0 0 4px 1px var(--shadow-color);
+}
+
+.pass{
+    background-color: var(--pass-color);
+}
+
+.fail{
+    background-color: var(--fail-color);
+}

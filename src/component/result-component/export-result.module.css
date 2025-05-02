@@ -1,0 +1,110 @@
+
+.menuItems{
+    /* min-width: 120px; */
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    padding: 5px 20px;
+}
+
+
+.title{
+    font-weight: bold;
+    color: var(--brand-color);
+}
+
+.scroll{
+    overflow-y: auto;
+}
+
+.space{
+    margin-right: 10px;
+}
+
+.tabPane{
+
+    display: flex;
+    background-color: var(--base-color);
+    margin-top:15px;
+    
+    /* border-radius: 5px; */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    box-shadow: 0 0 20px 0px var(--shadow-color);
+    color: var(--black-text);
+}
+
+.tabPane div{
+    
+    transition: all 0.3s;
+    padding: 6px 10px;
+    margin: 0px 10px;
+
+    border-bottom: 3px solid transparent;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.tabPane div:hover{
+    color: var(--brand-color);
+}
+
+.tabPane div:active{
+    transform: scale(0.9);
+}
+
+.tabPane .active{
+    /* font-weight: bold; */
+    border-bottom: 3px solid var(--brand-color);
+}
+
+.label{
+    font-size: 14px;
+    color: var(--black-text);
+}
+
+.italic{
+    font-style: italic;
+    font-size: 12px;
+    color: var(--black-text);
+}
+
+
+.tabBody2{
+    border: 1px solid rgba(0,0,0,0.15);
+    border-top: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding: 20px;
+    max-width: 450px;
+}
+
+
+.formatItem{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px 10px;
+    margin: 8px;
+    border-radius: 50px;
+    background-color: rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    color:var(--black-text);
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.formatItem:hover{
+    background-color: var(--brand-color);
+    color: var(--white-text);
+}
+
+.formatItem:active{
+    transform: scale(0.95);
+}

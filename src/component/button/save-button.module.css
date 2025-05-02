@@ -1,0 +1,45 @@
+.button{
+    color: var(--brand-color-dark);
+    padding: 3px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    border: 1.4px solid var(--brand-color-dark);
+}
+
+.button:hover{
+    background-color: var(--brand-color-dark);
+    color: var(--white-text);
+}
+
+
+.button:active{
+    transform: scale(0.9);
+}
+
+
+.anim{
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%{
+        border-color: transparent;
+    }
+
+    50%{
+        border-color: var(--error-color);
+    }
+
+    100%{
+        border-color: transparent;
+    }
+}

@@ -1,0 +1,27 @@
+.button{
+    padding: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--brand-color);
+    color: var(--white-text);
+}
+
+.button:hover{
+    transform: scale(1.05,1.05);
+}
+.button:active{
+    transform: scale(1,1);
+}
+
+.button div{
+    margin-left: 5px;
+}
+

@@ -1,0 +1,29 @@
+.status{
+    color:var(--black-text);
+    display: flex;
+    align-items: center;
+    /* opacity: 0.8; */
+    user-select: none;
+    margin-top: 2px;
+    /* transition: opacity 0.3s; */
+}
+
+/* .status:hover{
+    opacity: 1;
+} */
+
+.status .c{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.status .c label{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+
+.red{
+    color: var(--error-color) !important;
+}

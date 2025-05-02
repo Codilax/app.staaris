@@ -1,0 +1,38 @@
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--base-color);
+    color: var(--brand-color);
+
+    border-radius: 20px;
+    box-shadow: 0 0 23px 10px rgba(100,100,100,0.1);
+    padding: 1px 4px;
+}
+
+.items::after{
+    content: "";
+    position: absolute;
+    left: -11px;
+    margin-left: -1px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent var(--base-color) transparent transparent;
+
+    z-index: 5;
+}
+
+
+.items div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px 5px;
+}
+
+
+.title{
+    padding: 3px 5px;
+    font-size: 13px;
+}

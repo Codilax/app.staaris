@@ -1,95 +1,159 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import React, { useEffect, useState } from 'react';
+import style from './page.module.css'
+import constants from '../constants';
+import { allSysInfo, cpuInfo, memoryInfo, networks, staticInfo } from 'tauri-plugin-system-info-api';
+
+
+
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  const [info, setInfo] = useState("Click here for system info");
+
+  async function getInfo(){
+
+    var i = await staticInfo();
+    // var y = await allSysInfo();
+    // var x = await networks();
+    // var x = await memoryInfo();
+    // var x = await cpuInfo();
+    // var x = (await allSysInfo()).disks;
+    setInfo(JSON.stringify(i));
+
+  }
+
+  const [currentTime, setCurrentTime] = useState("...");
+
+  useEffect(
+    ()=>{
+        setCurrentTime(getTime())
+        setInterval(() => {
+          setCurrentTime(getTime())
+        }, 5000 )
+
+        return ()=>{
+          clearInterval()
+        }
+    }, []
+  )
+
+
+
+  function getDate(){
+
+    var date = new Date();
+
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    
+    let dayInM = date.getDate();
+    dayInM = dayInM.toString().padStart(2, '0');
+    
+    let mergeDate = getDayString(day) +", "+ getMonthString(month) + ' ' + dayInM;
+    return mergeDate;
+  }
+
+
+  function getMonthString(month){
+    switch (month) {
+      case 0: return "Jan";
+      case 1: return "Feb";
+      case 2: return "Mar";
+      case 3: return "April";
+      case 4: return "May";
+      case 5: return "June";
+      case 6: return "July";
+      case 7: return "Aug";
+      case 8: return "Sept";
+      case 9: return "Oct";
+      case 10: return "Nov";
+      case 11: return "Dec";
+    
+      default: return "Jan";
+    }
+  }
+
+
+  
+  function getDayString(day){
+    switch (day) {
+      case 0: return "Sun";
+      case 1: return "Mon";
+      case 2: return "Tue";
+      case 3: return "Wed";
+      case 4: return "Thur";
+      case 5: return "Fri";
+      case 6: return "Sat";
+    
+      default: return "Sun";
+    }
+  }
+
+
+  function getTime(){
+    var date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes.toString().padStart(2, '0');
+    let mergeTime = hours + ':' + minutes;
+    return mergeTime;
+  }
+
+
+  function getAMPM(){
+    var date = new Date();
+    let hours = date.getHours();
+    let x = hours >= 12 ? 'PM' : 'AM';
+    return x;
+  }
+ 
+
+
+  return (
+
+    <div className={`${style.home}`}>
+
+      <div className='row'>
+
+
+        {/* <div style={{ height:"80vh", overflow:"auto", background:"black", color:"white", padding:"30px"}} onClick={async ()=>await getInfo()} >
+            {info}
+        </div> */}
+
+
+      <div  className='col-12 '>
+
+        <div style={{paddingTop:"5vh", paddingLeft:"4%"}}>
+        
+          <label style={{fontSize:"120px"}} className={style.appname} > {constants.appName} </label>
+          <label style={{fontSize:"55px", paddingLeft:"10px"}} className={style.version} > {constants.appVersion} </label>
+        
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+      <div style={{paddingTop:"5vh", paddingLeft:"4%"}}>
+
+      <div> 
+          <label style={{fontSize:"75px"}} className={style.time}>{ 
+            currentTime
+          }</label>
+          <label className={style.ampm}>{getAMPM()}</label>
+       </div>
+       <label className={style.date}>{getDate()}</label>
+
+      </div>
+      
+      </div>
+  
+</div>
+
+</div>
+    
+
   );
+  
 }

@@ -1,0 +1,79 @@
+
+.boxCover{
+
+    margin: 0 120px;
+    position: absolute;
+    bottom: 15px;
+
+    z-index: 1;
+    transition: all 0.3s;
+    width: calc(100% - var(--sidebarWidth) - 240px );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.boxContent{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-color: var(--base-color) !important;
+    border: 1px solid rgba(255,255,255,0.1);
+
+    color:var(--brand-color);
+    border-radius: 100px;
+    font-size: 14px;
+
+    padding: 4px 5px;
+    padding-left: 10px;
+
+    box-shadow: 0 0 20px 2px rgba(100,100,100,0.2);
+    z-index: 10;
+
+}
+
+
+.conceal{
+    transform: scale(0);
+}
+
+.reveal{
+    transform: scale(1);
+}
+.controlX{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: 10px;
+    border-radius: 50%;
+}
+
+
+.close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: var(--brand-color);
+    margin-left: 5px;
+}
+
+
+.close:hover{
+    transform: scale(1.1);
+}
+
+.close:active{
+    transform: scale(0.9);
+}

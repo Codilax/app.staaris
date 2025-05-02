@@ -1,0 +1,18 @@
+.button{
+    color: var(--brand-color-dark);
+    padding: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    font-size: 13px;
+}
+
+.button:hover{
+    transform: scale(1.05,1.05);
+}
+.button:active{
+    transform: scale(1,1);
+}

@@ -1,0 +1,17 @@
+.bar{
+    background-color: var(--scroll-color);
+    min-width: 3px;
+    min-height: 22px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.barSlim{
+    background-color: var(--scroll-color);
+    min-width: 3px;
+    min-height: 22px;
+    border-radius: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+}

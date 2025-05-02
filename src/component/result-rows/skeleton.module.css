@@ -1,0 +1,70 @@
+.serial{
+
+    border: none;    
+    
+    border-right: 1px solid var(--resultBorderColor);
+    height: var(--resultRowHeight);
+    color:inherit;
+
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(210,210,210,0.2);
+    user-select: none;
+    cursor: pointer;
+    height: var(--resultRowHeight);
+
+
+}
+
+
+.reg{
+    border-right: 1px solid var(--resultBorderColor);
+    padding-left: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    height: var(--resultRowHeight);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.fakeRowItem{
+
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    /* justify-content: center; */
+
+  
+    /* Just added */
+    width: 100% !important; 
+    /* height: 25px; */
+    border-bottom: 1px solid var(--resultBorderColor);
+
+    font-size: 14px;
+    /* background: linear-gradient(to right, transparent, transparent, var(--brand-color), transparent, transparent); */
+    height: var(--resultRowHeight);
+    /* border-bottom: 1px solid transparent; */
+
+    /* width: 80%; */
+    /* margin: auto; */
+    /* background: gray; */
+
+
+    /* clip-path: polygon(2% 100%, 2% 60%, 15% 60%, 15% 100%, 20% 100%, 20% 37%, 35% 37%, 35% 100%, 40% 100%, 40% 9%, 60% 9%, 60% 100%, 65% 100%, 65% 26%, 80% 26%, 80% 100%, 85% 100%, 85% 50%, 100% 50%, 98% 50%, 98% 100%); */
+    /* background: linear-gradient(90deg, #f0f0f0, #e0e0e0, #f0f0f0) 0 0/ 100vh 100% fixed;  */
+    
+    /* animation: bgslide 1s infinite linear;  */
+
+}

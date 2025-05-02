@@ -1,0 +1,39 @@
+.cell{
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(210,210,210,0.2);
+    user-select: none;
+}
+
+.colBorder0{
+    border: none;    
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    background-color: transparent;
+    /* color: var(--black-text); */
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+.colBorderx{
+    
+    border: none;    
+    border-left: 1px solid var(--resultBorderColor);
+    border-bottom: 1px solid var(--resultBorderColor);
+    outline: none;
+    height: var(--resultRowHeight);
+    color:inherit;
+}
+
+
+.colSelectn1{
+    border-left-color: var(--brand-color) !important; 
+}
